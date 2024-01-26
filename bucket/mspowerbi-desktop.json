@@ -43,7 +43,7 @@
   ],
   "uninstaller": {
     "script": [
-      "$uninstdir = \"$env:ProgramData\\Package Cache\\{f9bc4bcc-aafd-4912-83c8-f36b5088f5a0}\"",
+      "$uninstdir = \"$env:ProgramData\\Package Cache\\{762d82db-7953-4447-8f4b-ca55296d8e0a}}\"",
       "if (Test-Path \"$uninstdir\")",
       "{",
       "   &\"$uninstdir\\PBIDesktopSetup_x64.exe\" -quiet -uninstall | Out-Null",
