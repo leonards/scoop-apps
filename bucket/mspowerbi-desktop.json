@@ -1,0 +1,58 @@
+{
+  "##": "Download URL and Hashes https://community.chocolatey.org/packages/PowerBI#files",
+  "version": "2.124.1805.0",
+  "description": "Power BI Desktop. Create rich, interactive reports with visual analytics at your fingertips",
+  "homepage": "https://powerbi.microsoft.com/en-us/desktop/",
+  "license": "",
+  "architecture": {
+    "64bit": {
+      "url": "https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe",
+      "hash": "61150a505d90b418d62dd94770614076b67f430cd9dd4db014bd4cc6016395b1"
+    }
+  },
+  "pre_download": "Assert-Administrator",
+  "pre_install": [
+    "$processname = \"PowerBI.exe\"",
+    "$process = Get-Process $processname -ErrorAction SilentlyContinue",
+    "if ($process) {",
+    "   $process.CloseMainWindow()",
+    "   Start-Sleep -Seconds 5",
+    "   if (!$process.HasExited) {",
+    "       Start-Sleep -Seconds 25",
+    "       $process | Stop-Process -Force",
+    "   }",
+    "}"
+  ],
+  "installer": {
+    "script": [
+      "$programname = \"Microsoft PowerBI Desktop*\"",
+      "if(!(Get-Package -Provider Programs -IncludeWindowsInstaller -Name \"$programname\" -MinimumVersion $version -ErrorAction SilentlyContinue))",
+      "{",
+      "   &\"$dir\\setup.exe\" -quiet -norestart ACCEPT_EULA=1 INSTALLLOCATION=\"$dir\" | Out-Null",
+      "   if(!(Get-Package -Provider Programs -IncludeWindowsInstaller -Name \"$programname\" -MinimumVersion $version -ErrorAction SilentlyContinue))",
+      "   {",
+      "       exit 1",
+      "   }",
+      "}",
+      "Remove-Item \"$dir\\setup.exe\" -Force"
+    ]
+  },
+  "post_install": [
+    "$CommonDesktopPath = [Environment]::GetFolderPath(\"CommonDesktopDirectory\")",
+    "#if (Test-Path \"$CommonDesktopPath\\Power BI Desktop.lnk\") {sudo Remove-Item \"$CommonDesktopPath\\Power BI Desktop.lnk\" -Force}"
+  ],
+  "uninstaller": {
+    "script": [
+      "$uninstdir = \"$env:ProgramData\\Package Cache\\{f9bc4bcc-aafd-4912-83c8-f36b5088f5a0}\"",
+      "if (Test-Path \"$uninstdir\")",
+      "{",
+      "   &\"$uninstdir\\PBIDesktopSetup_x64.exe\" -quiet -uninstall | Out-Null",
+      "}",
+      "Remove-Item \"$uninstdir\" -Force -ErrorAction SilentlyContinue"
+    ]
+  },
+  "checkver": {
+    "url": "https://community.chocolatey.org/packages/PowerBI",
+    "regex": "Power BI Desktop ([\\d.]+)"
+  }
+}
