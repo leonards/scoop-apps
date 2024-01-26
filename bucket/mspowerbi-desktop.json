@@ -6,7 +6,7 @@
   "license": "",
   "architecture": {
     "64bit": {
-      "url": "https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe",
+      "url": "https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe#/setup.exe",
       "hash": "61150a505d90b418d62dd94770614076b67f430cd9dd4db014bd4cc6016395b1"
     }
   },
