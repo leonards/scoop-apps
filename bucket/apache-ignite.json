@@ -9,9 +9,9 @@
             "java/openjdk"
         ]
     },
-    "url": "https://downloads.apache.org/ignite/$version/apache-ignite-$version-bin.zip",
+    "url": "https://downloads.apache.org/ignite/2.16.0/apache-ignite-2.16.0-bin.zip",
     "hash": "D90E8DB2167DB67444EF28F0D29E428F9B37FFFA829AA38816696958C634A50C",
-    "extract_dir": "apache-ignite-$version-bin",
+    "extract_dir": "apache-ignite-2.16.0-bin",
     "bin": [
         ["bin\\ignite.bat", "ignite"],
         ["bin\\igniterouter.bat", "igniterouter"],
