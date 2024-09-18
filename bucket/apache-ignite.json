@@ -1,5 +1,5 @@
 {
-    "version": "2.9.1",
+    "version": "2.16.0",
     "description": "A Distributed Database For High-Performance Computing With In-Memory Speed",
     "homepage": "https://ignite.apache.org/",
     "licence": "Apache-2.0",
@@ -9,9 +9,9 @@
             "java/openjdk"
         ]
     },
-    "url": "https://downloads.apache.org/ignite/2.16.0/apache-ignite-2.16.0-bin.zip",
+    "url": "https://downloads.apache.org/ignite/$version/apache-ignite-$version-bin.zip",
     "hash": "D90E8DB2167DB67444EF28F0D29E428F9B37FFFA829AA38816696958C634A50C",
-    "extract_dir": "apache-ignite-2.16.0-bin",
+    "extract_dir": "apache-ignite-$version-bin",
     "bin": [
         ["bin\\ignite.bat", "ignite"],
         ["bin\\igniterouter.bat", "igniterouter"],
