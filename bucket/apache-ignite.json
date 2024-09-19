@@ -19,13 +19,12 @@
         "bin\\control.bat"
     ],
     "post_install": [
-        "# Enable kafka, kubernetes, log4j, slf4j, spring-data, rest-http, web optional modules",
-        "Move-Item -Path $dir\\libs\\optional\\ignite-kafka -Destination $dir\\libs",
+        "# Enable kubernetes, log4j2, slf4j, direct-io, rest-http, web optional modules",
         "Move-Item -Path $dir\\libs\\optional\\ignite-kubernetes -Destination $dir\\libs",
-        "Move-Item -Path $dir\\libs\\optional\\ignite-log4j -Destination $dir\\libs",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-log4j2 -Destination $dir\\libs",
         "Move-Item -Path $dir\\libs\\optional\\ignite-slf4j -Destination $dir\\libs",
-        "Move-Item -Path $dir\\libs\\optional\\ignite-spring-data -Destination $dir\\libs",
         "Move-Item -Path $dir\\libs\\optional\\ignite-rest-http -Destination $dir\\libs",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-direct-io -Destination $dir\\libs",
         "Move-Item -Path $dir\\libs\\optional\\ignite-web -Destination $dir\\libs",
         "# Configuring working dir",
         "New-Item -Type Directory \"$persist\\work\" -Force | Out-Null"
