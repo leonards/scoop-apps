@@ -16,7 +16,6 @@
         ["bin\\ignite.bat", "ignite"],
         ["bin\\igniterouter.bat", "igniterouter"],
         ["bin\\sqlline.bat", "sqlline"],
-        "bin\\ignitevisorcmd.bat",
         "bin\\control.bat"
     ],
     "post_install": [
