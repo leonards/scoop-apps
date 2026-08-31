@@ -4,7 +4,7 @@
   "homepage": "https://bboxtype.com/typefaces/FiraGO/",
   "license": "OFL-1.1",
   "url": "https://bboxtype.com/downloads/FiraGO/Download_Folder_FiraGO_1001.zip",
-  "hash": "d3866120498c496931265a7b199dc0a54f44330170dde1178bb982fffcc6bb52",
+  "hash": "317d1992baf9dea33f8551a2aec01cf8e00869c917b022aa4ecc1aa1d2a42605",
   "extract_dir": "Download_Folder_FiraGO_1001/Fonts/FiraGO_OTF_1001",
   "checkver": {
     "regex": "Version: ([\\d.]+)"
